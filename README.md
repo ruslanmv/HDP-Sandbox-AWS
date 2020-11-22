@@ -3,15 +3,18 @@
 This is a summary of the official HDP tutorial https://hortonworks.com/tutorial/sandbox-deployment-and-install-guide/section/3/
 
 
-In order to use the in-browser Java SSH Client to ssh to EC2 instances, please use Firefox.
+
 
 ## Steps
 1. Login in to the AWS Console, and boot an EC2 instance with Amazon Linux 2 AMI:
    - Use >= 16GB of RAM (t2.xlarge or above).
    - Add >=20GB storage.
-   - Configure security Group: Add rule for [Type=All TCP, Source=My IP]. It is important to restrict access only to your IP. Do not make it open to the wild.
+   - Configure security Group: Add rule for [Type=All TCP, Source=My IP]. 
+      It is important to restrict access only to your IP. 
+
    - Keep note the key pair you are using for the EC2 instance.
-   - Note down the public ip of this instance. This is the IP address you are going to use to access HDP services and web UIs.
+   - Note down the public ip of this instance. 
+     This is the IP address you are going to use to access HDP services and web UIs.
    
    
 2. After the EC2 instance is up and running, select the instance, click `Connect`, select
@@ -19,7 +22,9 @@ In order to use the in-browser Java SSH Client to ssh to EC2 instances, please u
 Specify the path to your key-pair file and connect.
 
 
-3. Install git with `sudo yum install -y git`. Check out the scripts with `git clone https://github.com/qge/hdp.git`, and then `cd hdp`.
+3. Install git with `sudo yum install -y git`. 
+Check out the scripts with `git clone https://github.com/ruslanmv/HDP-Sandbox-AWS.git`,
+and then `cd HDP-Sandbox-AWS`.
 
 
 4. Install docker on the EC2 instance with `bash install_docker.sh`. Logout the SSH client and login again (Step 2).
@@ -28,7 +33,8 @@ Specify the path to your key-pair file and connect.
 5. Run `docker info` to confirm docker is working without `sudo`.
 
 
-6. `cd hdp/HDP_3.0.1` if you are not in the `hdp/HDP_3.0.1` directory yet. Install HDP through docker with `bash docker-deploy-hdp30.sh`. It will take a while to install.
+6. `cd HDP-Sandbox-AWS/HDP_3.0.1` if you are not in the `HDP-Sandbox-AWS/HDP_3.0.1` directory yet. 
+Install HDP through docker with `bash docker-deploy-hdp30.sh`. It will take a while to install.
 
 
 7. After it finishes, access Ambari through `http://your-ec2-public-ip:8080/` to confirm it is working.
