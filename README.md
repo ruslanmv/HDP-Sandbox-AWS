@@ -103,4 +103,4 @@ Install HDP through docker with `bash docker-deploy-hdp30.sh`. It will take a wh
 - 8081  ->  8081    Druid2
 - 2201  ->  2201    SSH HDP CDA
 
-The default Ambari credential is `raj_ops:raj_ops`. The default AmbariShell login credential is `root:hadoop`.
+The default Ambari credential is `raj_ops:raj_ops` and `maria_dev: maria_dev` . The default AmbariShell login credential is `root:hadoop`.
