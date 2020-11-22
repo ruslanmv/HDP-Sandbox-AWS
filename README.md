@@ -18,7 +18,6 @@ This is a summary of the official HDP tutorial https://hortonworks.com/tutorial/
    
    
 2. After the EC2 instance is up and running, select the instance, click `Connect`, select
-`I would like to connect with A Java SSH Client directly from my browser`.
 Specify the path to your key-pair file and connect.
 
 
