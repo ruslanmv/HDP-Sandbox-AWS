@@ -1,4 +1,4 @@
-# Install HDP 3.0.1 Sandbox Through Docker on AWS
+# Install HDP 3.0.1/ HDP2.6.5 Sandbox Through Docker on AWS
 
 This is a summary of the official HDP tutorial https://hortonworks.com/tutorial/sandbox-deployment-and-install-guide/section/3/
 
@@ -31,10 +31,18 @@ and then `cd HDP-Sandbox-AWS`.
 
 
 5. Run `docker info` to confirm docker is working without `sudo`.
-
+If you want to install the version HDP 3.0.1  you follow:
 
 6. `cd HDP-Sandbox-AWS/HDP_3.0.1` if you are not in the `HDP-Sandbox-AWS/HDP_3.0.1` directory yet. 
 Install HDP through docker with `bash docker-deploy-hdp30.sh`. It will take a while to install.
+
+Hive View is not present in HDP 3.0 or Ambari 2.7
+If you want you can install the HDP 2.6.5 (previous version)
+
+6. `cd HDP-Sandbox-AWS/HDP_2.6.5` if you are not in the `HDP-Sandbox-AWS/HDP_2.6.5` directory yet. 
+Install HDP through docker with `bash docker-deploy-hdp265.sh`. It will take a while to install.
+
+The advantage of the HDP2.6.5
 
 
 7. After it finishes, access Ambari through `http://your-ec2-public-ip:8080/` to confirm it is working.
